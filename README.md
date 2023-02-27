@@ -5,12 +5,12 @@ The Covid Portfolio Project is a data exploration project designed to interpret 
 ## Files
 The project includes the following files:
 
-**CovidDeaths.xlsx**: the dataset containing information on Covid-19 deaths worldwide
+**CovidDeaths.xlsx** - the dataset containing information on Covid-19 deaths worldwide
 
-**CovidVaccinations.xlsx**: the dataset containing information on Covid-19 vaccinations worldwide
+**CovidVaccinations.xlsx** - the dataset containing information on Covid-19 vaccinations worldwide
 
 
-**Data Exploration.sql**: the SQL code used to explore the data in the database
+**Data Exploration.sql** - the SQL code used to explore the data in the database
 
 ## Data Exploration
 The Data **Exploration.sql** file contains SQL queries for exploring the Covid-19 data. The following queries have been used in this project:
