@@ -78,6 +78,13 @@ Where continent is not null
 Group By Location
 order by TotalDeathCount desc
 ```
+<img src = "/Screenshots/sql-1.JPG">
+<img src = "/Screenshots/sql-2.JPG">
+<img src = "/Screenshots/sql-3.JPG">
+<img src = "/Screenshots/sql-4.JPG">
+<img src = "/Screenshots/sql-5.JPG">
+<img src = "/Screenshots/sql-6.JPG">
+<img src = "/Screenshots/sql-7.JPG">
 
 
 ```sql
@@ -91,15 +98,12 @@ Where continent is not null
 Group By continent
 order by TotalDeathCount desc 
 ```
-This query extracts the total death count for each continent and displays the continent with the highest death count per population. The MAX function is used to find the maximum value of the Total_deaths column for each continent. The CAST function is used to convert the Total_deaths column to an integer data type. The result is ordered in descending order by the TotalDeathCount.
+This query extracts the total death count for each continent and displays the continent with the highest death count per population. 
+- The MAX function is used to find the maximum value of the Total_deaths column for each continent. 
+- The CAST function is used to convert the Total_deaths column to an integer data type. 
+The result is ordered in descending order by the TotalDeathCount.
 
-<img src = "Covid-Portfolio-Project/Screenshots/sql-1.JPG">
-<img src = "Covid-Portfolio-Project/Screenshots/sql-2.JPG">
-<img src = "Covid-Portfolio-Project/Screenshots/sql-3.JPG">
-<img src = "Covid-Portfolio-Project/Screenshots/sql-4.JPG">
-<img src = "Covid-Portfolio-Project/Screenshots/sql-5.JPG">
-<img src = "Covid-Portfolio-Project/Screenshots/sql-6.JPG">
-<img src = "Covid-Portfolio-Project/Screenshots/sql-7.JPG">
+<img src = "/Screenshots/sql-8.JPG">
 
 
 
@@ -131,7 +135,14 @@ WHERE continent IS NOT NULL
 ORDER BY 1,2
 ```
 
-These two queries extract global COVID-19 data. The first query calculates the total number of cases, deaths, and the death percentage on each day. The SUM function is used to find the total number of cases and deaths for each day. The CAST function is used to convert the new_deaths column to an integer data type. The GROUP BY clause groups the data by date. The second query calculates the total number of cases, deaths, and the death percentage over the entire period. The result is ordered in ascending order by the total_cases and total_deaths.
+These two queries extract global COVID-19 data. 
+- The first query calculates the total number of cases, deaths, and the death percentage on each day. The SUM function is used to find the total number of cases and deaths for each day. The CAST function is used to convert the new_deaths column to an integer data type. The GROUP BY clause groups the data by date. 
+- The second query calculates the total number of cases, deaths, and the death percentage over the entire period. The result is ordered in ascending order by the total_cases and total_deaths.
+
+<img src = "/Screenshots/sql-9.JPG">
+<img src = "/Screenshots/sql-10.JPG">
+
+
 
 ```sql
 --Total population vs vaccination 
@@ -148,6 +159,7 @@ ORDER BY 2,3
 ```
 
 This query compares the total population of a location with the number of people who have been vaccinated. It uses the SUM function with the OVER clause to calculate the rolling sum of new_vaccinations for each location. The result is ordered by location and date.
+<img src = "/Screenshots/sql-11.JPG">
 
 
 ```sql
@@ -164,11 +176,17 @@ JOIN  PortfolioProject..CovidVaccinations vac
 ON dea.location=vac.location
 AND dea.date=vac.date
 ```
-The above query uses a Common Table Expression (CTE) to define a temporary result set that can be used later in the query. In this case, the CTE named "PopvsVac" combines data from two tables, CovidDeaths and CovidVaccinations, to calculate the rolling number of people vaccinated in each location. The CTE is then used in subsequent queries to calculate the percentage of population vaccinated.
+The above query uses a Common Table Expression (CTE) to define a temporary result set that can be used later in the query. 
+In this case, 
+- The CTE named "PopvsVac" combines data from two tables, CovidDeaths and CovidVaccinations, to calculate the rolling number of people vaccinated in each location. 
+- The CTE is then used in subsequent queries to calculate the percentage of population vaccinated.
 
 Using a CTE has several benefits for this project. It allows us to break down complex queries into smaller, more manageable pieces, which can make them easier to read and understand. It also helps to reduce code duplication, since the result set can be used multiple times in the query. Finally, it can improve performance by allowing the database engine to optimize the execution plan for the entire query, rather than treating each subquery separately.
 
 Overall, using a CTE can make queries more efficient, easier to read, and easier to maintain, which is especially important for complex data analysis projects.
+<img src = "/Screenshots/sql-12.JPG">
+<img src = "/Screenshots/sql-13.JPG">
+
 
 
 ```sql
@@ -218,11 +236,15 @@ Select *
 from dbo.PercentPopulationVaccinated
 ```
 
-This query is used to calculate the percentage of the population vaccinated against COVID-19 in different countries and continents. It first creates a temporary table named #PercentPopulationVaccinated and inserts data into it by joining the CovidDeaths and CovidVaccinations tables on location and date. It then calculates the rolling sum of new vaccinations for each location using the SUM function with the OVER clause. The results are stored in the RollingPeopleVaccinated column. Finally, the query calculates the percentage of the population vaccinated by dividing RollingPeopleVaccinated by population and multiplying by 100.
+This query is used to calculate the percentage of the population vaccinated against COVID-19 in different countries and continents. 
+- It first creates a temporary table named #PercentPopulationVaccinated and inserts data into it by joining the CovidDeaths and CovidVaccinations tables on location and date. 
+- It then calculates the rolling sum of new vaccinations for each location using the SUM function with the OVER clause. The results are stored in the RollingPeopleVaccinated column. 
+- Finally, the query calculates the percentage of the population vaccinated by dividing RollingPeopleVaccinated by population and multiplying by 100.
 
 The CREATE VIEW statement creates a view named PercentPopulationVaccinated that stores the same data as the temporary table but filters out any rows where the continent is null.
 
 These queries are useful for the project because they provide a way to track the progress of COVID-19 vaccination efforts in different regions and compare vaccination rates between countries and continents.
+<img src = "/Screenshots/sql-14.JPG">
 
 
 ## Usage
