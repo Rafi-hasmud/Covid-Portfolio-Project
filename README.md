@@ -78,15 +78,41 @@ Where continent is not null
 Group By Location
 order by TotalDeathCount desc
 ```
+Select all data from the CovidDeaths table and order it by date and location.
 <img src = "/Screenshots/sql-1.JPG">
+-----------------------------------------------------------------------------------
+
+Select all data from the CovidVaccinations table and order it by date and location.
 <img src = "/Screenshots/sql-2.JPG">
+-----------------------------------------------------------------------------------
+
+Select the data that we are going to be using for the analysis, including location, date, total_cases, new_cases, total_deaths, and population. Order the data by location and date.
+
 <img src = "/Screenshots/sql-3.JPG">
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Look at total cases vs total deaths to show the likelihood of dying if you contract Covid-19 in your country. Order the data by location and date.
+
 <img src = "/Screenshots/sql-4.JPG">
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Look at total cases vs population to show what percentage of the population has been infected with Covid-19. Order the data by location and date.
+
 <img src = "/Screenshots/sql-5.JPG">
+
+-----------------------------------------------------------------------------------
+Look at countries with the highest infection rate compared to population. Group the data by location and population and order it by the percentage of the population infected in descending order.
+
 <img src = "/Screenshots/sql-6.JPG">
+
+-----------------------------------------------------------------------------------
+Show countries with the highest death count per population. Group the data by location and order it by the total death count in descending order.
+
 <img src = "/Screenshots/sql-7.JPG">
 
+-----------------------------------------------------------------------------------
 
+#### Show continents with the highest death count per population.
 ```sql
 --Break things down by continent
 --Showing continent with highest death count per population
@@ -117,7 +143,7 @@ The result is ordered in descending order by the TotalDeathCount.
 
 These SQL queries were used in the COVID-19 Portfolio Project for further deep analysis. They were also executed in Microsoft SQL Server Management Studio and were used to generate visualizations and insights about the COVID-19 pandemic.
 
-
+#### Global Numbers
 ```sql
 --Global Numbers
 
@@ -142,8 +168,9 @@ These two queries extract global COVID-19 data.
 <img src = "/Screenshots/sql-9.JPG">
 <img src = "/Screenshots/sql-10.JPG">
 
+-----------------------------------------------------------------------------------
 
-
+#### Total population vs vaccination
 ```sql
 --Total population vs vaccination 
 
@@ -159,9 +186,12 @@ ORDER BY 2,3
 ```
 
 This query compares the total population of a location with the number of people who have been vaccinated. It uses the SUM function with the OVER clause to calculate the rolling sum of new_vaccinations for each location. The result is ordered by location and date.
+
 <img src = "/Screenshots/sql-11.JPG">
 
+-----------------------------------------------------------------------------------
 
+#### Combining Data with CTE
 ```sql
 --Using CTE
 
@@ -184,11 +214,13 @@ In this case,
 Using a CTE has several benefits for this project. It allows us to break down complex queries into smaller, more manageable pieces, which can make them easier to read and understand. It also helps to reduce code duplication, since the result set can be used multiple times in the query. Finally, it can improve performance by allowing the database engine to optimize the execution plan for the entire query, rather than treating each subquery separately.
 
 Overall, using a CTE can make queries more efficient, easier to read, and easier to maintain, which is especially important for complex data analysis projects.
+
 <img src = "/Screenshots/sql-12.JPG">
 <img src = "/Screenshots/sql-13.JPG">
 
+-----------------------------------------------------------------------------------
 
-
+#### Combining Data with VIEW
 ```sql
 -- Create temporary table
 DROP table if exists #PercentPopulationVaccinated
@@ -244,6 +276,7 @@ This query is used to calculate the percentage of the population vaccinated agai
 The CREATE VIEW statement creates a view named PercentPopulationVaccinated that stores the same data as the temporary table but filters out any rows where the continent is null.
 
 These queries are useful for the project because they provide a way to track the progress of COVID-19 vaccination efforts in different regions and compare vaccination rates between countries and continents.
+
 <img src = "/Screenshots/sql-14.JPG">
 
 
