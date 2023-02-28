@@ -17,6 +17,9 @@ The Data **Exploration.sql** file contains SQL queries for exploring the Covid-1
 
 These SQL queries are used to explore and analyze COVID-19 data for a data analysis project.
 
+### Part -1
+
+
 The first two queries are simply selecting and ordering the data from the CovidDeaths and CovidVaccinations tables.
 
 The next several queries are looking at different aspects of the CovidDeaths data. They are calculating death percentages based on total cases, looking at the percentage of the population infected with COVID-19 in different countries, identifying the countries with the highest infection rates compared to population, and identifying countries with the highest death counts per population. These queries help provide insight into the severity of the COVID-19 pandemic in different parts of the world.
@@ -93,6 +96,9 @@ Where continent is not null
 Group By continent
 order by TotalDeathCount desc 
 ```
+
+### Part -2
+
 
 These SQL queries were used in the COVID-19 Portfolio Project to extract relevant data from the project's database. They were executed in Microsoft SQL Server Management Studio and were used to generate visualizations and insights about the COVID-19 pandemic.
 
