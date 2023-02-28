@@ -93,6 +93,20 @@ order by TotalDeathCount desc
 ```
 This query extracts the total death count for each continent and displays the continent with the highest death count per population. The MAX function is used to find the maximum value of the Total_deaths column for each continent. The CAST function is used to convert the Total_deaths column to an integer data type. The result is ordered in descending order by the TotalDeathCount.
 
+<img src = "Covid-Portfolio-Project/Screenshots/sql-1.JPG">
+<img src = "Covid-Portfolio-Project/Screenshots/sql-2.JPG">
+<img src = "Covid-Portfolio-Project/Screenshots/sql-3.JPG">
+<img src = "Covid-Portfolio-Project/Screenshots/sql-4.JPG">
+<img src = "Covid-Portfolio-Project/Screenshots/sql-5.JPG">
+<img src = "Covid-Portfolio-Project/Screenshots/sql-6.JPG">
+<img src = "Covid-Portfolio-Project/Screenshots/sql-7.JPG">
+
+
+
+
+
+
+
 
 ### Part -2
 
