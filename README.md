@@ -17,12 +17,18 @@ The Data **Exploration.sql** file contains SQL queries for exploring the Covid-1
 
 These SQL queries are used to explore and analyze COVID-19 data for a data analysis project. They were executed in Microsoft SQL Server Management Studio and were used to generate visualizations and insights about the COVID-19 pandemic.
 
-### Part -1
+### Part - 1
 
 
 The first two queries are simply selecting and ordering the data from the CovidDeaths and CovidVaccinations tables.
 
-The next several queries are looking at different aspects of the CovidDeaths data. They are calculating death percentages based on total cases, looking at the percentage of the population infected with COVID-19 in different countries, identifying the countries with the highest infection rates compared to population, and identifying countries with the highest death counts per population. These queries help provide insight into the severity of the COVID-19 pandemic in different parts of the world.
+The next several queries are looking at different aspects of the CovidDeaths data. 
+They are calculating death percentages based on -
+- total cases, 
+- looking at the percentage of the population infected with COVID-19 in different countries, 
+- identifying the countries with the highest infection rates compared to population,
+- identifying countries with the highest death counts per population. 
+These queries help provide insight into the severity of the COVID-19 pandemic in different parts of the world.
 
 The last query break down the death counts by continent to provide a more global view of the pandemic. They identify the continents with the highest death counts and death counts per population.
 
@@ -138,7 +144,7 @@ The result is ordered in descending order by the TotalDeathCount.
 
 
 
-### Part -2
+### Part - 2
 
 
 These SQL queries were used in the COVID-19 Portfolio Project for further deep analysis. They were also executed in Microsoft SQL Server Management Studio and were used to generate visualizations and insights about the COVID-19 pandemic.
@@ -211,7 +217,10 @@ In this case,
 - The CTE named "PopvsVac" combines data from two tables, CovidDeaths and CovidVaccinations, to calculate the rolling number of people vaccinated in each location. 
 - The CTE is then used in subsequent queries to calculate the percentage of population vaccinated.
 
-Using a CTE has several benefits for this project. It allows us to break down complex queries into smaller, more manageable pieces, which can make them easier to read and understand. It also helps to reduce code duplication, since the result set can be used multiple times in the query. Finally, it can improve performance by allowing the database engine to optimize the execution plan for the entire query, rather than treating each subquery separately.
+Using a CTE has several benefits for this project. 
+- It allows us to break down complex queries into smaller, more manageable pieces, which can make them easier to read and understand. 
+- It also helps to reduce code duplication, since the result set can be used multiple times in the query. 
+- Finally, it can improve performance by allowing the database engine to optimize the execution plan for the entire query, rather than treating each subquery separately.
 
 Overall, using a CTE can make queries more efficient, easier to read, and easier to maintain, which is especially important for complex data analysis projects.
 
