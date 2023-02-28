@@ -24,7 +24,7 @@ The first two queries are simply selecting and ordering the data from the CovidD
 
 The next several queries are looking at different aspects of the CovidDeaths data. They are calculating death percentages based on total cases, looking at the percentage of the population infected with COVID-19 in different countries, identifying the countries with the highest infection rates compared to population, and identifying countries with the highest death counts per population. These queries help provide insight into the severity of the COVID-19 pandemic in different parts of the world.
 
-The last three queries break down the death counts by continent to provide a more global view of the pandemic. They identify the continents with the highest death counts and death counts per population.
+The last query break down the death counts by continent to provide a more global view of the pandemic. They identify the continents with the highest death counts and death counts per population.
 
 Overall, these queries are useful for gaining insights and understanding trends in COVID-19 data for analysis and visualization purposes.
 
@@ -77,16 +77,11 @@ FROM PortfolioProject.dbo.CovidDeaths
 Where continent is not null
 Group By Location
 order by TotalDeathCount desc
+```
 
+
+```sql
 --Break things down by continent
-
-Select continent, MAX (cast (Total_deaths as int)) as TotalDeathCount
-FROM PortfolioProject.dbo.CovidDeaths
---Where location like '%states%'
-Where continent is not null
-Group By continent
-order by TotalDeathCount desc 
-
 --Showing continent with highest death count per population
 
 Select continent, MAX (cast (Total_deaths as int)) as TotalDeathCount
@@ -96,22 +91,14 @@ Where continent is not null
 Group By continent
 order by TotalDeathCount desc 
 ```
+This query extracts the total death count for each continent and displays the continent with the highest death count per population. The MAX function is used to find the maximum value of the Total_deaths column for each continent. The CAST function is used to convert the Total_deaths column to an integer data type. The result is ordered in descending order by the TotalDeathCount.
+
 
 ### Part -2
 
 
 These SQL queries were used in the COVID-19 Portfolio Project for further deep analysis. They were also executed in Microsoft SQL Server Management Studio and were used to generate visualizations and insights about the COVID-19 pandemic.
 
-```sql
---Showing continent with highest death count per population
-
-SELECT continent, MAX(CAST(Total_deaths AS INT)) AS TotalDeathCount
-FROM PortfolioProject.dbo.CovidDeaths
-WHERE continent IS NOT NULL
-GROUP BY continent
-ORDER BY TotalDeathCount DESC
-```
-This query extracts the total death count for each continent and displays the continent with the highest death count per population. The MAX function is used to find the maximum value of the Total_deaths column for each continent. The CAST function is used to convert the Total_deaths column to an integer data type. The result is ordered in descending order by the TotalDeathCount.
 
 ```sql
 --Global Numbers
