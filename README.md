@@ -15,7 +15,7 @@ The project includes the following files:
 ## Data Exploration
 The Data **Exploration.sql** file contains SQL queries for exploring the Covid-19 data. The following queries have been used in this project:
 
-These SQL queries are used to explore and analyze COVID-19 data for a data analysis project.
+These SQL queries are used to explore and analyze COVID-19 data for a data analysis project. They were executed in Microsoft SQL Server Management Studio and were used to generate visualizations and insights about the COVID-19 pandemic.
 
 ### Part -1
 
@@ -100,7 +100,7 @@ order by TotalDeathCount desc
 ### Part -2
 
 
-These SQL queries were used in the COVID-19 Portfolio Project to extract relevant data from the project's database. They were executed in Microsoft SQL Server Management Studio and were used to generate visualizations and insights about the COVID-19 pandemic.
+These SQL queries were used in the COVID-19 Portfolio Project for further deep analysis. They were also executed in Microsoft SQL Server Management Studio and were used to generate visualizations and insights about the COVID-19 pandemic.
 
 ```sql
 --Showing continent with highest death count per population
