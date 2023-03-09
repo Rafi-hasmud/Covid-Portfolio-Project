@@ -149,7 +149,7 @@ The result is ordered in descending order by the TotalDeathCount.
 ### Part - 2
 
 
-These SQL queries were used in the COVID-19 Portfolio Project for further deep analysis. They were also executed in Microsoft SQL Server Management Studio and were used to generate visualizations and insights about the COVID-19 pandemic.
+These SQL queries were used in the COVID-19 Portfolio Project for further deep analysis. 
 
 #### Global Numbers
 ```sql
